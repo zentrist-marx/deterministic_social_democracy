@@ -2,7 +2,7 @@ title: Cabinet
 is-pinned-card: true
 tags: advisor
 card-image: img/muller_cabinet.jpg
-view-if: in_spd_majority or (in_emergency_government and chancellor_party = "SPD") or (in_left_front and chancellor_party = "SPD")
+view-if: spd_in_government == 1 and (month > 5 or year > 1928)
 on-arrival: last_cabinet_action = 1
 new-page: true 
 
@@ -10,7 +10,26 @@ new-page: true
 
 With an SPD chancellor and SPD cabinet members, we can direct the affairs of the national government.
 
-- #cabinet
+[? if agricultural_policy_timer > 0: Agricultural Policy timer: [+ agricultural_policy_timer +] <br> ?]
+[? if coalition_affairs_timer > 0 : Coalition Affairs timer: [+ coalition_affairs_timer +] <br> ?]
+[? if constitutional_reform_timer > 0 : Constitutional Reform timer: [+ constitutional_reform_timer +] <br> ?]
+[? if economic_democracy_timer > 0 : Economic Democracy timer: [+ economic_democracy_timer +] <br> ?]
+[? if economic_policy_timer > 0 : Economic Policy timer: [+economic_policy_timer+] <br> ?]
+[? if education_science_timer> 0 : Education and Science timer: [+education_science_timer+] <br> ?]
+[? if fiscal_policy_timer> 0 : Fiscal Policy timer: [+fiscal_policy_timer+] <br> ?]
+[? if foreign_policy_timer> 0 : Foreign Policy timer: [+foreign_policy_timer+] <br> ?]
+[? if homosexual_rights_timer> 0 : Homosexual Rights timer: [+homosexual_rights_timer+] <br> ?]
+[? if judiciary_timer> 0 : Judicial Reforms timer: [+judiciary_timer+] <br> ?]
+[? if labor_affairs_timer> 0 : Labour Affairs timer: [+labor_affairs_timer+] <br> ?]
+[? if labor_rights_timer> 0 : Labor Rights timer: [+labor_rights_timer+] <br> ?]
+[? if military_policy_timer> 0 : Military Policy timer: [+military_policy_timer+] <br> ?]
+[? if police_timer> 0 : Interior Policy timer: [+police_timer+] <br> ?]
+[? if prussian_affairs_timer> 0 : Prussian Affairs timer: [+prussian_affairs_timer+] <br> ?]
+[? if shuffle_cabinet_timer> 0 : Shuffle Cabinet timer: [+shuffle_cabinet_timer+] <br> ?]
+[? if social_welfare_timer> 0 : Social Welfare timer: [+social_welfare_timer+] <br> ?]
+[? if womens_rights_timer> 0 : Women's Rights timer: [+womens_rights_timer+] <br> ?]
+
+- #govt_affairs
 - @back: Return to main
 
 @back
