@@ -1,1 +1,35 @@
+title: Party Decisions
+is-pinned-card: true
+tags: advisor
+card-image: img/Reichstagsfraktion_der_SPD.jpg
+on-arrival: last_party_action = 1
+new-page: true 
 
+= Party Decisions
+
+Rather than relying on random cards, we can instead choose directly which actions we want to take.
+
+[? if campaigning_timer > 0: Campaigning timer: [+ campaigning_timer +] <br> ?]
+[? if confronting_nazis_timer > 0 : Confronting the Nazis timer: [+ confronting_nazis_timer +] <br> ?]
+[? if crisis_program_timer > 0 : Addressing the Economic Crisis timer: [+ crisis_program_timer +] <br> ?]
+[? if enemies_timer > 0 : Choosing Our Enemies timer: [+ enemies_timer +] <br> ?]
+[? if fundraising_timer > 0 : Fundraising timer: [+fundraising_timer+] <br> ?]
+[? if ideology_timer> 0 : Ideology timer: [+ideology_timer+] <br> ?]
+[? if inter_party_relationships_timer> 0 : Inter-Party Relationships timer: [+inter_party_relationships_timer+] <br> ?]
+[? if international_relations_timer> 0 : International Relations timer: [+international_relations_timer+] <br> ?]
+[? if iron_front_timer> 0 : Iron Front rally timer: [+iron_front_timer+] <br> ?]
+[? if media_timer> 0 : Media timer: [+media_timer+] <br> ?]
+[? if party_disunity_timer> 0 : Party Disunity timer: [+party_disunity_timer+] <br> ?]
+[? if party_organizations_timer> 0 : Party Organizations timer: [+party_organizations_timer+] <br> ?]
+[? if peoples_party_timer> 0 : People's Party timer: [+peoples_party_timer+] <br> ?]
+[? if rally_timer> 0 : Political Rally timer: [+rally_timer+] <br> ?]
+[? if reichsbanner_timer> 0 : Reichsbanner timer: [+reichsbanner_timer+] <br> ?]
+[? if streetfighting_timer> 0 : Streetfighting timer: [+streetfighting_timer+] <br> ?]
+[? if weimar_rally_timer> 0 : Republican Coordination timer: [+weimar_rally_timer+] <br> ?]
+
+- #party_affairs
+- @back: Return to main
+
+@back
+on-arrival: last_party_action = 0
+go-to: root
